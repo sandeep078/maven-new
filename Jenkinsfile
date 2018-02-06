@@ -21,11 +21,6 @@ pipeline {
       steps {
           sh 'mvn package'
            }
-    }
-          post {
-                always {
-                      archive ''
-}
 }
 
    }
