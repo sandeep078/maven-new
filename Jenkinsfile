@@ -26,7 +26,7 @@ pipeline {
    }
 	post {
 	always {
-		archive 'dist/*.jar'
+		archive 'add/target/*.jar'
 }
 }
 
