@@ -19,7 +19,7 @@ pipeline {
 }
   stage('container step') {
       steps {
-          sh 'sudo docker run --name sandy centos -d /dev/null'
+          sh 'sudo docker run --name sandy centos -itd /bin/bash'
            }
 }
 
