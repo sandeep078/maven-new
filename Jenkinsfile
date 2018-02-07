@@ -17,6 +17,12 @@ pipeline {
           sh 'mvn package'
            }
 }
+  stage('docker step') {
+      steps {
+          sh 'docker pull centos'
+           }
+}
+
 
    }
 	post {
