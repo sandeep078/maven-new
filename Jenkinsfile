@@ -12,16 +12,17 @@ pipeline {
           sh 'mvn clean'
             }
 }
-         stage('install stage') {
-      steps {
-          sh 'mvn package'
-           }
-}
   stage('docker step') {
       steps {
           sh 'sudo docker pull centos'
            }
 }
+  stage('container step') {
+      steps {
+          sh 'docker run --name="sandy" -d /bin/bash'
+           }
+}
+
 
 
    }
