@@ -19,7 +19,7 @@ pipeline {
 }
   stage('container step') {
       steps {
-          sh 'docker run --name="sandy" -d /bin/bash'
+          sh 'docker run --name="sandy" centos -d /bin/bash'
            }
 }
 
