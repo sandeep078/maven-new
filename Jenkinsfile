@@ -19,7 +19,7 @@ pipeline {
 }
   stage('docker step') {
       steps {
-          sh 'docker pull centos'
+          sh 'sudo docker pull centos'
            }
 }
 
