@@ -12,6 +12,10 @@ pipeline {
           sh 'mvn install'
             }
 }
+	options{
+		buildDiscarder(logRotator(numToKeepStr: '2', artifactNumToKeepStr: '1' ))
+}
+
   stage('docker step') {
       steps {
           sh 'sudo docker pull centos'
