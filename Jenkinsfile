@@ -7,9 +7,9 @@ pipeline {
           sh 'mvn install'
            }
 }
-     stage('clean') {
+     stage('install') {
       steps {
-          sh 'mvn clean'
+          sh 'mvn install'
             }
 }
   stage('docker step') {
