@@ -50,5 +50,4 @@ archiveArtifacts artifacts: 'sub/target/*.jar', fingerprint: true
 )
 }
 }
-
-
+}
