@@ -1,6 +1,11 @@
 pipeline {
   agent any
 
+ options {
+                buildDiscarder(logRotator(numToKeepStr: '2', artifactNumToKeepS$
+}
+
+
   stages {
    stage('build') {
       steps {
@@ -11,9 +16,6 @@ pipeline {
       steps {
           sh 'mvn install'
             }
-}
-	options{
-		buildDiscarder(logRotator(numToKeepStr: '2', artifactNumToKeepStr: '1' ))
 }
 
   stage('docker step') {
