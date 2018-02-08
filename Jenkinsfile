@@ -17,13 +17,6 @@ pipeline {
           sh 'sudo docker pull centos'
            }
 }
-  stage('container step') {
-      steps {
-          sh 'sudo docker run --name sandy centos -d tail -f /dev/null'
-           }
-}
-
-
 
    }
 	post {
