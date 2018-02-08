@@ -23,25 +23,13 @@ pipeline {
           sh 'sudo docker pull centos'
            }
 
-     post {
-                success {
-                emailext(
-                subject: "job passed",
-                body: "congratulations",
-                to: "sandeep.smart078@gmail.com"
-)
-}
-}
 }
 
 }
 	post {
-		failure {
-		emailext(
-		subject: "job failed",
-		body: "please check the configuration",
-		to: "sandeep.smart078@gmail.com"
-)
+	always {
+archiveArtifacts artifacts: 'add/target/*.jar', fingerprint: true
+archiveArtifacts artifacts: 'sub/target/*.jar', fingerprint: true
 }
 }
 }
